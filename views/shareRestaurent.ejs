@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('include/meta-data') %>
+    <link rel="stylesheet" href="/Styles/shreRestaurent.css">
+    <title>Share Resturents</title>
+</head>
+<body>
+    
+    <%- include('include/navigation-pane') %>
+
+    <h1 id="main-content">Share your Favourite Restaurent!</h1>
+
+    <div id="form-data">
+
+        <form action="/shareRestaurent" method="POST">
+            <label for="re-name">Restaurent Name</label>
+            <input type="text" id="re-name" name="resName" required>
+
+            <label for="re-address">Address</label>
+            <input type="text" id="re-address" name="resAddress" required>
+
+            <label for="cuisine">Type of cuisine</label>
+            <input type="text" id="cuisine" name="rescuisine" placeholder="@Mexican" required>
+
+            <label for="re-web">Restaurent Website</label>
+            <input type="text" id="re-web" name="resWeb" required>
+
+            <label for="re-recommand">Why do you recommand it?</label>
+            <textarea id="re-recommand" rows="5" name="resDiscription"></textarea>
+
+            <button type="submit"><b>Share Restaurent</b></button>
+
+        </form>
+
+    </div>

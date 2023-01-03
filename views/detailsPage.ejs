@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('include/meta-data') %>
+    <link rel="stylesheet" href="/Styles/detailsPage.css">
+    <title>Recommented restaurents</title>
+</head>
+<body>
+    
+    <%- include('include/navigation-pane') %>
+    
+
+    <h1 id="main-content"><%= keyi.resName %></h1>
+    <p><%= keyi.resAddress %> | <%= keyi.rescuisine %></p>
+    <p><%= keyi.resDiscription %></p>
+    <a href="<%= keyi.resWeb %>">WebSite</a>

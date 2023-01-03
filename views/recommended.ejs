@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('include/meta-data') %>
+    <link rel="stylesheet" href="/Styles/recommented.css">
+    <title>Recommented restaurents</title>
+</head>
+<body>
+    
+    <%- include('include/navigation-pane') %>
+    
+
+    <h1 id="main-content">Recommented Restaurents</h1>
+    <p>Find your next favourite restaurents with help of our other users!</p>
+
+    <% if(numberOfRestaurent === 0) { %>
+
+        <p>You don't have any restaurent</p>
+    <%} else { %>
+
+        <p>We have found <%= numberOfRestaurent %> Restaurents</p>
+
+    <ul id="restaurent-item">
+
+        <% for(const key of keys){ %>
+            <%- include('include/restaurents-data',{key:key}) %>
+
+<% } %>
+</ul>
+
+     <% } %>
+
+</body>
+</html>
